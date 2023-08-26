@@ -44,7 +44,7 @@ export const createEmployee = async (req, res) => {
       return res
         .status(403)
         .json({ msg: 'You are not authorized to perform this task' });
-    }
+  }
     const { name, email, password, accessType } = req.body;
     if (!name || !email || !password || !accessType) {
       return res.status(400).json({ msg: 'Please enter all the fields' });
